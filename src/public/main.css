@@ -1,0 +1,398 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: #4d34ac;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+.title {
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title > p {
+    font-size: 12rem;
+    color: #ccdd03;
+}
+.button {
+    background: #FEDB39;
+    position: absolute;
+    width: 10rem;
+    height: 4rem;
+    top: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: scale(100%);
+    transition: transform .4s;
+    border: none;
+    border-radius: 4px;
+}
+.text_user {
+    position: absolute;
+    width: 20rem;
+    height: 3.5rem;
+    top: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    border: none;
+}
+.button:hover {
+    transform: scale(110%);
+}
+.team {
+    position: absolute;
+    width: 20rem;
+    height: 12rem;
+    bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.team > p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+.team > p:last-child {
+    width: 80%;
+    text-align: center;
+}
+.grid_area {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10rem, 1fr));
+    grid-template-rows: repeat(2, minmax(10rem, 1fr));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+.grid_area_element {
+    display: flex;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    background: #FEDB39;
+    transform: translateY(0%);
+    cursor: pointer;
+}
+.game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.element_img {
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+}
+.game_area {
+    position: relative;
+    width: 48rem;
+    height: 48rem;
+    background: #FEDB39;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(12rem, 1fr));
+    grid-template-rows: repeat(4, minmax(12rem, 1fr));
+}
+.game_control {
+    position: relative;
+    width: 20rem;
+    height: 44rem;
+    background: #FEDB39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game_area_element1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+.game_area_element1:hover {
+    background: #ccdd03;
+}
+.game_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0%) translateY(0%);
+}
+.control_area{
+    position: absolute;
+    width: 15rem;
+    height: 12rem;
+    background: #ccdd03;
+    bottom: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.btn{
+    width: 10rem;
+    height: 4rem;
+    background: #4d34ac;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 1.1rem;
+}
+
+.ctl_control, .control {
+    position: absolute;
+    top: 2rem;
+    width: 15rem;
+    height: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3 , minmax(5rem, 1fr));
+    grid-template-rows: repeat(3 , minmax(5rem, 1fr));
+    overflow: hidden;
+}
+.ctl, .control_element{
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+
+}
+.lds1{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1000;
+}
+.move5{
+    
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.move6{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.lds2, .move1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.lds3, .move3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.lds4{
+    grid-column: 5/4;
+    grid-row: 5/4;
+}
+.lds5, .move4{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.lds6, .move2{
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+}
+.control_img{
+    width: 5rem;
+    height: 5rem;
+}
+.delete{
+    position: absolute;
+    bottom: 10%;
+    background: #ccdd03;
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete_game{
+    position: fixed;
+    z-index: 1111;
+    background: red;
+    top: 1rem;
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.message_exit{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.ms{
+    position: relative;
+    width: 50rem;
+    height: 30rem;
+    background: #FEDB39;
+}
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exit{
+    position: relative;
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ccdd03;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.img_p{
+    width: 4rem;
+    height: 4rem;
+}
+@media screen and (max-width:480px){
+    .title {
+        width: 100%;
+        height: 20rem;
+        top: 0rem;
+    }
+    .title > p {
+        font-size: 8rem;
+    }
+    .team {
+        width: 15rem;
+        height: 8rem;
+        top: 38rem;
+    }
+    .team > p {
+        font-size: .8rem;
+    }
+    .button {
+        width: 10rem;
+        height: 4rem;
+        top: 30rem;
+    }
+    .text_user {
+        top: 20rem;
+        width: 20rem;
+    }
+    .grid_area {
+        grid-template-columns: repeat(2, minmax(5rem, 1fr));
+        grid-template-rows: repeat(3, minmax(5rem, 1fr));
+    }
+    .grid_area_element {
+        width: 10rem;
+        height: 10rem;
+    }
+    .element_img {
+        width: 9.4rem;
+        height: 9.4rem;
+    }
+    .game {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .game_area {
+        top: 2.5rem;
+        width: 20rem;
+        height: 20rem;
+        grid-template-columns: repeat(4, minmax(5rem, 1fr));
+        grid-template-rows: repeat(4, minmax(5rem, 1fr));
+    }
+    .game_area_element1 {
+        
+        width: 5rem;
+        height: 5rem;
+    }
+    .game_control {
+        width: 100%;
+        height: 20rem;
+        bottom: 0;
+        
+    }
+    .control_area {
+        width: 100%;
+        height: 4rem;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .btn {
+        height: 3rem;
+    }
+    .control, .ctl_control {
+        width: 12rem;
+        height: 12rem;
+        grid-template-columns: repeat(3 , minmax(4rem, 1fr));
+        grid-template-rows: repeat(3 , minmax(4rem, 1fr));
+    }
+    .control_element, .ctl{
+        width: 4rem;
+        height: 4rem;
+    }
+    .ctl{
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+    }
+    .control_img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+@keyframes in {
+    from {
+        opacity: .1;
+        transform: translateY(25%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes out {
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

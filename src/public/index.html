@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Qbitz</title>
+</head>
+<body>
+    <div class="message_exit">
+        <div class="ms">
+            <p class="message"></p>
+        </div>
+    </div>
+    <div class="delete_game"></div>
+    <div class="container">
+        <div class="element_1 title"><p>Q'bitz</p></div>
+        <label for="name"></label>
+        <input type="text" title="name" class="element_1 text_user" placeholder="Nombre (min 5 letras)">
+        <input type="submit" class="element_1 button" value="Jugar">
+        <div class="element_1 team">
+            <p>Dariana Bahena Vázquez</p>
+            <p>María José Hernández Vega</p>
+            <p>Jordi Cruz Martinez Benítez</p>
+            <p>Regina Pérez Villalpando</p>
+            <p>Ana Jatziri Torres Armendáriz</p> 
+            <p>4°B IBT</p>
+        </div>
+    </div>
+    <div class="game">
+        <div class="game_area"></div>
+        <div class="game_control">
+            <div class="ctl_control">
+                <div class="ctl move1"></div>
+                <div class="ctl move2"></div>
+                <div class="ctl move3"></div>
+                <div class="ctl move4"></div>
+                <div class="ctl move5"></div>
+                <div class="ctl move6"></div>
+            </div>
+            <div class="control">
+                
+                <div class="control_element lds1">
+                    <img src="img/lado1.jpg" alt="" class="control_img">
+                </div>
+                <div class="control_element lds2">
+                    <img src="img/lado2.jpg" alt="" class="control_img">
+                </div>
+                <div class="control_element lds3">
+                    <img src="img/lado3.jpg" alt="" class="control_img">
+                </div>
+                <div class="control_element lds4">
+                    <img src="img/lado4.jpg" alt="" class="control_img">
+                </div>
+                <div class="control_element lds5">
+                    <img src="img/lado5.jpg" alt="" class="control_img">
+                </div>
+                <div class="control_element lds6">
+                    <img src="img/lado6.jpg" alt="" class="control_img">
+                </div>
+            </div>
+            <div class="control_area">
+                <img class="img_p" src="" alt="">
+                <div data-id="" class="finish_btn btn"><p>Terminar</p></div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
